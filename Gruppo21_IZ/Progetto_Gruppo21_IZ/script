@@ -1,0 +1,10 @@
+config load "C:\Users\angel\Desktop\Gruppo21_IZ\Gruppo21_IZ\Progetto_Gruppo21_IZ\Progetto_Gruppo21_IZ.ioc"
+project toolchain STM32CubeIDE
+
+SetStructure Advanced
+
+project setCustomFWPath "C:\Users\angel\STM32Cube\Repository\STM32Cube_FW_G4_V1.5.0"
+
+project generate 
+
+exit wait

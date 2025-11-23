@@ -1,0 +1,6 @@
+rt_nonfinite.o: \
+ C:/Users/angel/Desktop/Gruppo21_IZ/Gruppo21_IZ/Progetto_Gruppo21_IZ_ert_rtw/rt_nonfinite.c \
+ C:/Users/angel/Desktop/Gruppo21_IZ/Gruppo21_IZ/Progetto_Gruppo21_IZ_ert_rtw/rtwtypes.h \
+ C:/Users/angel/Desktop/Gruppo21_IZ/Gruppo21_IZ/Progetto_Gruppo21_IZ_ert_rtw/rt_nonfinite.h
+C:/Users/angel/Desktop/Gruppo21_IZ/Gruppo21_IZ/Progetto_Gruppo21_IZ_ert_rtw/rtwtypes.h:
+C:/Users/angel/Desktop/Gruppo21_IZ/Gruppo21_IZ/Progetto_Gruppo21_IZ_ert_rtw/rt_nonfinite.h:

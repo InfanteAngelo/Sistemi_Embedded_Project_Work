@@ -1,0 +1,298 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   40 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "valoreVeneziane"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "valoreVeneziane"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "valoreRiscaldamento"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "valoreRiscaldamento"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "modLuci"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "modLuci"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "valoreTemporizzazione"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "valoreTemporizzazione"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "msg"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "msg"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "isValidRiscaldamento"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "isValidRiscaldamento"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "isValidVeneziane"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "isValidVeneziane"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "isValidTemporizzazione"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "isValidTemporizzazione"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "tmpVeneziane"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "tmpVeneziane"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "tmpRiscaldamento"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "tmpRiscaldamento"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "tmpTemporizzazione"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "tmpTemporizzazione"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "tmpModLuci"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "tmpModLuci"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "luci"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "luci"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "riscaldamento"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "riscaldamento"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "tempo"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "tempo"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "veneziane"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "veneziane"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "configurazioneValida"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "configurazioneValida"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "stopTimer"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "stopTimer"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_Progetto_Gruppo21_IZ"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Inizializzazione"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Gestore_logica"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestore_logica"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Stato_di_configurazione"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestore_logica.Stato_di_configurazione"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Accensione_luci"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestore_logica.Stato_di_configurazione.Accensione_luci"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Luci_temporizzate"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestore_logica.Stato_di_configurazione.Accensione_luci.Luci_temporizzate"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Configurazione_riscaldamento"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestore_logica.Stato_di_configurazione.Configurazione_riscaldamento"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Regolazione_veneziane"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestore_logica.Stato_di_configurazione.Regolazione_veneziane"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Led_utente"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Led_utente"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Gestione_Pulsanti_Luci"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestione_Pulsanti_Luci"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Gestore_pulsante_Luci"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestione_Pulsanti_Luci.Gestore_pulsante_Luci"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Gestore_pulsante_Luci_TMP"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Inizializzazione.Stato_Attivo.Gestione_Pulsanti_Luci.Gestore_pulsante_Luci_TMP"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i3"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousZC"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousZC"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousZC"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousZC"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousZC"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousZC"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousZC"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
